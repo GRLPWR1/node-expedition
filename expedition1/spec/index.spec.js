@@ -1,9 +1,9 @@
 const {
   getRightRovers,
-  getAllRover,
+  getAllRovers,
   getRightDoc,
   getRightCaptain,
-  getAllEngineer,
+  getAllEngineers,
   getRightRocket,
 } = require('../src/functions');
 
@@ -30,8 +30,8 @@ describe('Экспедиция на Марс', () => {
       expect(bestDoctor).toEqual(crew[4]);
     });
     it('позволяет выбрать всех бортмехаников', () => {
-      const allEngineer = getAllEngineer();
-      expect(allEngineer).toEqual([crew[2], crew[6]]);
+      const allEngineers = getAllEngineers();
+      expect(allEngineers).toEqual([crew[2], crew[6]]);
     });
   });
   describe('Отбор оборудования', () => {
@@ -46,8 +46,8 @@ describe('Экспедиция на Марс', () => {
       ];
     });
     it('Позволяет отобрать все марсоходы', () => {
-      const allRover = getAllRover();
-      expect(allRover).toEqual([equipment[0], equipment[3], equipment[4]]);
+      const allRovers = getAllRovers();
+      expect(allRovers).toEqual([equipment[0], equipment[3], equipment[4]]);
     });
     it('позволяет выбрать только те марсоходы, которые смогут прослужить больше 3 лет', () => {
       const rightRovers = getRightRovers();
